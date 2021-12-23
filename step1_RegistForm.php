@@ -8,7 +8,7 @@
 </head>
 <body>
     <h3>회원가입</h3>
-    <form action="step1_RegistProcess.php" method="$_POST">
+    <form action="step1_RegistProcess.php" method="POST">
         <label>사용자명:</label>
         <input type="text" name="username" placeholder="유저명입력해주세요"/><br>
         <label>비밀번호:</label>

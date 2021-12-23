@@ -17,7 +17,7 @@
  */
 
  //1.
- $username = $_POST['usename'];
+ $username = $_POST['username'];
  $password = $_POST['password'];
 
  //2.
@@ -38,21 +38,20 @@ $sql="SELECT * FROM users WHERE username='".$username."' ";
 //5.
 $resultset=mysqli_query($dbconn,$sql);
 
-$number=mysqli_num_rows($result); //resultset안에 몇개의 레코드가 있는지 숫자로 반환
+$number=mysqli_num_rows($resultset); //resultset안에 몇개의 레코드가 있는지 숫자로 반환
 //6.1
 if($number>0){
     header('Location:step1_RegistForm.php');
+}else{
+   //7.
+   $sql = "INSERT INTO users(username, userpwd) VALUES('". $username . "','" . $password . "')";
+
+   //8.
+   $result = mysqli_query($dbconn,$sql);
+
+   //9.
+   if($result){
+       header('Location:step1_LoginForm.php');
+   }
 }
-
-
- //7.
- $sql = "INSERT INTO users(username, userpwd) VALUES('". $username . "','" . $password . "')";
-
- //8.
- $result = mysqli_query($dbconn,$sql);
-
- //9.
- if($result){
-     header('Location:step1_LoginForm.php');
- }
 ?>
