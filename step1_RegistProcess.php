@@ -19,9 +19,9 @@
  //1.
  $username = $_POST['username'];
  $password = $_POST['password'];
-
+ $tel = $_POST['tel'];
  //2.
- if(empty($username)|| empty($password)){
+ if(empty($username)|| empty($password)|| empty($tel)){
      echo("<script>alert('유저명 또는 비밀번호가 공백입니다.');</script>");
      header('Location: step1_RegistForm.php');
  }
@@ -44,7 +44,7 @@ if($number>0){
     header('Location:step1_RegistForm.php');
 }else{
    //7.
-   $sql = "INSERT INTO users(username, userpwd) VALUES('". $username . "','" . $password . "')";
+   $sql = "INSERT INTO users(username, userpwd, tel) VALUES('". $username . "','" . $password ."','".$tel. "')";
 
    //8.
    $result = mysqli_query($dbconn,$sql);

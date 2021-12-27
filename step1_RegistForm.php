@@ -13,6 +13,8 @@
         <input type="text" name="username" placeholder="유저명입력해주세요"/><br>
         <label>비밀번호:</label>
         <input type="text" name="password" placeholder="비밀번호를 입력해주세요"/><br>
+        <label>전화번호:</label>
+        <input type="text" name="tel" placeholder="전화번호를 입력해주세요"/><br>
         <input type="submit" value="저장">
     </form>
 </body>
