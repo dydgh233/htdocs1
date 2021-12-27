@@ -1,0 +1,18 @@
+
+.box{
+    text-align: center;
+    padding: 50px;
+    height: 200px;
+    
+    font-size: 3rem;
+}
+
+.box1{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 2rem;
+    
+   
+   
+}

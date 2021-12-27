@@ -44,7 +44,10 @@ if($number>0){
     header('Location:step1_RegistForm.php');
 }else{
    //7.
-   $sql = "INSERT INTO users(username, userpwd, tel) VALUES('". $username . "','" . $password ."','".$tel. "')";
+   
+   $sql = "INSERT INTO users(username, userpwd, tel) VALUES('". $username . "','" sha2(".$password.",256) , .$tel. "')";
+   
+   
 
    //8.
    $result = mysqli_query($dbconn,$sql);
@@ -55,3 +58,4 @@ if($number>0){
    }
 }
 ?>
+

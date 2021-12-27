@@ -37,6 +37,8 @@ if(is_null($dbconn)){
 //4 SQL 구성
 
 $sql = "SELECT userpwd FROM users WHERE username='".$username."'";
+$sql = "SELECT * FROM users
+WHERE userpwd = sha2('user5',256)";
 
 //5. 실행하고 결과확인
 $resultset=mysqli_query($dbconn,$sql);
